@@ -1,0 +1,33 @@
+{
+  "name": "lemon-sour",
+  "version": "0.0.0",
+  "description": "> TODO: description",
+  "author": "Yoshida24",
+  "homepage": "https://github.com/Yoshida24/learn-lerna#readme",
+  "license": "ISC",
+  "main": "lib/lemon-sour.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yoshida24/learn-lerna.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "echo": "echo \"build executed\"",
+    "build": "tsc"
+  },
+  "bugs": {
+    "url": "https://github.com/Yoshida24/learn-lerna/issues"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.7",
+    "ts-node": "^10.4.0",
+    "typescript": "4.5.4"
+  }
+}
