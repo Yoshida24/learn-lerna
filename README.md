@@ -14,9 +14,31 @@
 ### lernaがややハマるケース
 - ビルド構成を統一したい時
 
-## Commands
+## Getting started
 
-> 大原則： lernaを操作するときは基本的にルートディレクトリで操作します。
+> 大原則： lernaを操作するときは基本的にプロジェクトのルートディレクトリで操作
+
+### Install
+
+```
+npm install
+npx lerna bootstrap --hoist
+```
+
+### build (typescript)
+
+```
+npx lerna build
+```
+
+### execute
+> ノート：一度ビルドしないと通らないので注意
+
+```
+npx ts-node ./packages/cli/src/cli.ts
+```
+
+## Commands
 
 ### Install
 
@@ -24,10 +46,10 @@
 npm i -D lerna
 ```
 
-### Init
+### Init (execute on generate project only at once)
 
 ```
-lerna init
+npx lerna init
 ```
 
 ### create first package
@@ -117,6 +139,8 @@ lerna bootstrap --hoist
 
 > 普通に`lerna clean`, `lerna bootstrap` をした場合、ルートのnode_modulesが83MBに対して、子のpackageのode_modulesの容量は60MB程度でほぼ節約されていなかった。
 
+## Usecase
+
 ### typescript のビルド設定を共通化
 
 - ルートに`tsconfig.json`を作成する
@@ -140,6 +164,6 @@ lerna bootstrap --hoist
 > ノート：`^`をつけていると再インストール時にうっかりバージョンが上がるので注意
 
 ## 参考
-https://qiita.com/hisasann/items/929b6702df1d6e871ce7
+[lernaを使ってmonorepoなリポジトリを作ってみた](https://qiita.com/hisasann/items/929b6702df1d6e871ce7)
 [CIでLerna publishするまで](https://qiita.com/Quramy/items/02f21e10c5cc8c8f5869)
 [lerna bootstrap --hoistの使い方と注意点](https://sakebook.hatenablog.com/entry/2018/10/31/080905)
