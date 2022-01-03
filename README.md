@@ -28,11 +28,11 @@ npx lerna bootstrap --hoist
 ### build (typescript)
 
 ```
-npx lerna build
+npx lerna run build
 ```
 
 ### execute
-> ノート：一度ビルドしないと通らないので注意
+> ノート：一度ビルドしないと通らないことがあったが今は再現しない。
 
 ```
 npx ts-node ./packages/cli/src/cli.ts
